@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 18px;
+}
+header {
+    background-image: url('https://picsum.photos/1000/800?random=9');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    font-size: 22px;
+}
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#intro {
+    margin: 4rem;
+}
+#intro div {
+    gap: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#intro div img {
+    border-radius: 50%;
+    max-width: 240px;
+}
+#intro div h2 {
+    text-align: center;
+}
+#intro div div{
+    display: inline-block;
+}
+
+@media screen and (max-width: 1400px) {
+    body {
+        font-size: 18px;
+    }
+}
+#articles {
+    background-color: #d9d6d6;
+    padding: 4rem;
+}
+article {
+    display: flex;
+    margin-bottom: 4rem;
+    gap: 4rem;
+}
+article:nth-child(even) {
+    flex-direction: row-reverse;
+}
+article div:first-child {
+    flex-basis: 240px;
+    flex-grow: 0;
+}
+article div:last-child {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+footer {
+    background-color: #3b3939;
+    padding: 4rem;
+}
+footer ul {
+    display: flex;
+    list-style: none;
+    gap: 4rem;
+    justify-content: space-between;
+}
+footer ul li img {
+    max-width: 100px;
+}
+@media (max-width: 840px) {
+    #articles img {
+        display: none;
+    }
+}
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 3rem;
+    }
+    #intro div{
+        display: grid;
+        grid-auto-rows: 1fr;
+    }
+    article {
+        flex-direction: column;
+        display: block;
+    }
+    article h1{
+        margin-bottom: 10px;
+    }
+    footer {
+       display: flex;
+        justify-content: center;
+    }
+    footer ul {
+        flex-direction: column;
+        margin: 2rem;
+        gap: 2rem;
+    }
+}
